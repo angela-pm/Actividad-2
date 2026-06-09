@@ -1,0 +1,53 @@
+---
+title: "My Storyboard at IAS - tabs"
+output: 
+  flexdashboard::flex_dashboard
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard) # always
+```
+
+<!-- links -->
+```{r}
+map1link="https://github.com/CIENCIA-DE-DATOS-ESPACIALES1/Actividad-1/raw/main/MAPA1.rds"
+viz1=url(map1link)
+
+map2link="https://github.com/CIENCIA-DE-DATOS-ESPACIALES1/Actividad-1/raw/main/MAPA2.rds"
+viz2=url(map2link)
+
+map3link= "https://github.com/CIENCIA-DE-DATOS-ESPACIALES1/Actividad-1/raw/main/MAPA3.rds"
+viz3=url(map3link)
+```
+
+## Sidebar {.sidebar}
+
+
+Los mapas represetan la cantidad de mobiles en EEUU
+
+## Column {.tabset .tabset-fade}
+
+
+### Dot Density Map (DDM)
+
+```{r}
+readRDS(viz1)
+```
+
+
+### Proportional Symbol Map (PSM)
+
+```{r}
+readRDS(viz2)
+```
+
+### Coropleto
+
+```{r}
+readRDS(viz3)
+```
+
+
+
+
+
